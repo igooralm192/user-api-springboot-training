@@ -9,6 +9,7 @@ public class ApiResponse {
     return Map.of(
         "statusCode", exception.statusCode,
         "message", exception.message,
-        "stack", exception.stack != null ? exception.stack : exception.toString());
+        "stack", exception.stack != null ? exception.stack : exception.toString(),
+        "errors", exception.errors != null ? exception.errors : Map.of());
   }
 }
